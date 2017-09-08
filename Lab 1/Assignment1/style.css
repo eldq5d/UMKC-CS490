@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#home {
+    background-color: black;
+    color: white;
+}
+
+.mybutton {
+    background-color: #008080;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 32px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+}
+
+.mybutton:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.class {
+    position: relative;
+    justify-content: flex-end;
+    float: left;
+}
+
+#header {
+    display: flex;
+    justify-content:center;
+    background-color: teal;
+    color: white;
+}
+
+img {
+    width: 262px;
+    height: 262px;
+}
