@@ -8,7 +8,7 @@ function getGithubInfo(user) {
 function showUser(user) {
     $('#profile h2').html("username: "+user.login);
     $('#profile .userid').html("user id: "+user.id);
-    $('#profile .avatar').html("<img src=https://avatars0.githubusercontent.com/u/"+user.id+"?v=4?s=220/>");
+    $('#profile .avatar').html("<img src=https://avatars0.githubusercontent.com/u/"+user.id+"?v=4?s=40/>");
     $('#profile .information').html("link to user account: "+user.html_url);
     $('#profile .creation').html("account creation date: "+user.created_at);
     $('#profile .followed').html("number of people followed by user: "+user.following);
