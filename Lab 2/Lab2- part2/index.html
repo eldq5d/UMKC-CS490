@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="tttGameApp">
 <head>
     <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
@@ -7,9 +7,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
+<body ng-controller="GameCtrl">
+<h1>Tic Tac Toe</h1>
 <div class = 'main-container'>
-    <div class="board">
+    <div class="board" style="color: deeppink">
         <div class="cell" data-indx = "0"></div>
         <div class="cell" data-indx = "1"></div>
         <div class="cell" data-indx = "2"></div>
@@ -24,13 +25,10 @@
         <div class= 'initial'>
             <div class = 'start'>Start</div>
         </div>
-        <div class = "ingame" id = "won">You Won!</div>
-        <div class = "ingame" id = "lost">You Lost!</div>
-        <div class = "ingame" id = "draw">It's a Draw</div>
         <div id = "test"></div>
+        <button class="newgame" ng-click="ctrl.reset()">Restart</button>
     </div>
 </div>
 <script src="script.js"></script>
 </body>
 </html>
-

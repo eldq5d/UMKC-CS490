@@ -1,3 +1,9 @@
+var tttGameApp = angular.module('tttGameApp', []);
+
+tttGameApp.controller('GameCtrl', function GameCtrl($scope, game) {
+    $scope.game = game;
+});
+
 var globals = {};
 
 var State = function(){
@@ -29,6 +35,7 @@ var State = function(){
             }
         }
     }
+
 };
 
 var GameManager = function(){
@@ -88,7 +95,6 @@ $(".cell").each(function(){
             next.advanceTurn();
             $this.addClass('occupied');
 
-            $("#test").text(next.board);
             globals.game.advanceTo(next);
         }
     });
