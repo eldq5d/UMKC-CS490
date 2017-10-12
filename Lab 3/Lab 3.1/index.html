@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+
+<div ng-controller="View1Ctrl" style="top: 200px">
+    <div class="menu" id="div_SearchContainer">
+        <h1 align="absolute" style="text-align: center; color: dimgray">Weather Forecast</h1>
+        <input type="number" id="txt_placeName" placeholder="Enter zip code"
+               style="margin-left: 275px"/>
+        <button id="btn_getWeather" ng-click="getWeather()">Get Weather</button>
+    </div>
+
+    <div id="div_VenueList">
+        <h2 style="text-align: center; color: dimgray"> Current Weather </h2>
+            <p ng-repeat='weather in weatherforecast' style="font-size: x-large; color: #5e5e5e; text-align: center; list-style: none">
+                {{weather.description+" "+weather.icon}}
+            </p>
+        <div class="icon"></div>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
